@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0C0C0F;
+  --color-bg-surface: #141417;
+  --color-bg-elevated: #1C1C21;
+  --color-bg-overlay: rgba(12,12,15,0.85);
+
+  --color-text-primary: #F0EEE8;
+  --color-text-secondary: #8A8880;
+  --color-text-tertiary: #4A4845;
+  --color-text-inverse: #0C0C0F;
+
+  --color-accent-warm: #D4A853;
+  --color-accent-warm-dim: rgba(212,168,83,0.15);
+  --color-accent-glow: rgba(212,168,83,0.06);
+
+  --color-positive: #5A8A6A;
+  --color-negative: #7A4A4A;
+  --color-border: rgba(240,238,232,0.08);
+  --color-border-subtle: rgba(240,238,232,0.04);
+
+  --font-display: 'DM Serif Display', 'Noto Serif SC', serif;
+  --font-body: 'DM Sans', 'Noto Sans SC', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --shadow-card: 0 4px 40px rgba(0,0,0,0.6), 0 1px 0 rgba(240,238,232,0.05) inset;
+  --shadow-accent: 0 0 32px rgba(212,168,83,0.25), 0 4px 16px rgba(0,0,0,0.4);
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}
+
+/* Custom Utilities based on Design Spec */
+.text-display {
+  font-family: var(--font-display);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
+
+.bg-radial-glow {
+  background: radial-gradient(ellipse 70% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 70%), var(--color-bg-base);
+}
+
+.safe-area-pt {
+  padding-top: env(safe-area-inset-top, 44px);
+}
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom, 34px);
+}
